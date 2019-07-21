@@ -1,0 +1,28 @@
+html,
+body {
+    font-family: $font-regular, sans-serif;
+}
+
+body { 
+    background-color: $white;
+    font-weight: 500;
+    overflow-x: hidden;  
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+}
+
+header { 
+
+}
+
+footer {
+
+}
+
+/*.container, .container-fluid {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}*/
+

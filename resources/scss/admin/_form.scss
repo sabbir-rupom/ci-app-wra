@@ -1,0 +1,16 @@
+#contentForm {
+    label {
+        text-align: right;
+        
+        &.custom-file-label {
+            text-align: left;
+        }
+    }
+}  
+
+#imagePreview {
+    text-align: center;
+    img {
+        max-height: 200px; 
+    }
+}

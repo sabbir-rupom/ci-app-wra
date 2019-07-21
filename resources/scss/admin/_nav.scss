@@ -1,0 +1,180 @@
+/*
+* ---------------------
+* Content Expansion CSS
+* ---------------------
+*/
+
+aside.sidebar.expand {
+    left: 0;
+}
+
+.main-content.shrink {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+/*
+* --------------
+* Sidebar CSS
+* --------------
+*/
+
+aside.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    min-height: 100%;
+    width: 250px;
+    -webkit-transition: left 0.5s ease-out; /* For Safari 3.1 to 6.0 */
+    transition: left 0.5s ease-out;
+    z-index: 100;
+
+    background-color: #222;
+
+    .sidebar-header {
+        font-weight: bold;
+        font-size: 150%;
+        padding: .5rem 1rem;
+        line-height: 40px;
+        background-color: #111;
+        color: #ddd;
+
+        span {
+
+        }
+    }
+
+    ul.sidebar-menu {
+        .menu-item {
+            padding: 0; 
+            background-color: inherit;
+
+            &:hover, &:focus, &:active {
+                outline-style: none;
+            }
+
+            a {
+                padding: .75rem 1.25rem;
+                display: block;
+                color: $white;
+                &:hover, &:active, &.active {
+                    text-decoration: none;
+                    background-color: #007bff;
+                    outline-style: none;
+
+                }
+                &.collapsed {
+                    span.caret {
+                        transform: rotate(40deg);
+                        -webkit-transform: rotate(40deg);
+                        transition: .3s transform ease-in-out;
+                    }
+                }
+
+                span {
+                    &.caret {
+                        border: solid #eee;
+                        border-width: 0 1px 1px 0;
+                        display: inline;
+                        cursor: pointer;
+                        padding: 3px;
+                        position: absolute;
+                        right: 0;
+                        margin-top: 10px;
+                        transform: rotate(-140deg);
+                        -webkit-transform: rotate(-140deg);
+                        transition: .3s transform ease-in-out;
+                    }
+
+                    &.name {
+
+                    }
+
+                    &.fa {
+                        width: 20px;
+                    }
+                }
+
+            }
+
+            .child-menu {
+                a.menu-item {
+                    padding-left: 2.5rem;
+                    background-color: #222;
+
+                    &:hover, &.active {
+                        background-color: #007bff;
+                        outline-style: none;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* --- Toggle Sidebar -- */
+
+.toggle-bar {
+    position: relative;
+    .sidebar-toggle {
+        position: absolute;
+        left: -30px;
+        top: -30px;
+        line-height: 44px;
+        border-radius: 0;
+        cursor: pointer;
+        color: $white;
+        &:hover {
+            background: #3c8dbc;
+        }
+    }
+}
+
+
+/*
+* ------------
+* Main Navbar
+* ------------
+*/
+
+.main-nav {
+    color: $white;
+    .navbar-nav {
+        .nav-link {
+            color: $white;
+            &:hover, &:focus, &:active, &:visited {
+                font-weight: bold;
+                color: inherit;
+                outline-style: none;
+            }
+        }
+        .dropdown {
+            .dropdown-menu {
+                left: auto;
+                right: 0;
+                border: 0;
+                color: white;
+                text-align: right;
+                top: 115%;
+                padding: 0;
+                a {
+                    border: 0;
+                    background: #148ea1;
+                    color: #eee;
+                    line-height: 40px; 
+                    .fa {
+                        float: left;
+                        line-height: 40px; 
+                    }
+                    &:hover, &:focus, &:active {
+                        background: #ddd;
+                        color: #222;
+                        outline-style: none;
+                    }
+                }
+
+            }
+        }
+    }
+}

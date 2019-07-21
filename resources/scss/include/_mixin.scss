@@ -1,0 +1,68 @@
+@mixin main_nav_style($bg_color: transparent, $color: $white) {
+    &:hover {
+        background: $bg_color;
+        /*border-top: 1px solid $blue-color !important;*/
+        /*border-radius: 25px;*/
+        color: $color;
+    }
+
+    &:focus {
+        background: $bg_color;
+        /*border-top: 1px solid $blue-color !important;*/
+        /*border-radius: 25px;*/
+        color: $color;
+        outline: medium none;
+    }
+
+    &:active {
+        background: $bg_color !important;
+        /*border-top: 1px solid $blue-color !important;*/
+        /*border-radius: 25px;*/
+        color: $color;
+        outline: medium none;
+    }
+}
+@mixin anchor_style($color: $white, $text_decoration: none) {
+    &:hover {
+        color: $color;
+        text-decoration: none;
+    }
+
+    &:focus {
+        color: $color;
+        outline: medium none;
+        text-decoration: $text_decoration;
+    }
+
+    &:active {
+        color: $color;
+        outline: medium none;
+        text-decoration: $text_decoration;
+    }
+}
+
+@mixin background_style($position: center, $size: cover) {
+    background-position: $position;
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    background-size: $size;
+    -o-background-size: $size;
+
+}
+
+@mixin transition_style($type: all, $time: 1000ms, $animation: ease-in) {
+    -webkit-transition: $type $time $animation;
+    -moz-transition: $type $time $animation;
+    -ms-transition: $type $time $animation;
+    -o-transition: $type $time $animation;
+    transition: $type $time $animation; 
+
+}
+
+@mixin box_shadow_style($w: 0px, $x: 0px, $y: 0px, $z: 0px, $type: inset) {
+    -webkit-box-shadow: $w $x $y $z $type;
+    -moz-box-shadow: $w $x $y $z $type;
+    box-shadow: $w $x $y $z $type;
+}
+
+
