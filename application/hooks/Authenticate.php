@@ -29,7 +29,7 @@ class Authenticate {
     public function checkController() {
         
         if(stristr($this->subDirectoryClass, 'admin')) {
-            
+
             if ($this->CI->session->has_userdata('userId') == false || $this->CI->session->userdata('userId') <= 0) {
                 if (in_array($this->CI->router->fetch_class(), $this->ignoredController) == false) {
                     redirect('admin/login');
@@ -40,3 +40,5 @@ class Authenticate {
     }
 
 }
+
+

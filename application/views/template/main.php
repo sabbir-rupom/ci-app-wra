@@ -37,12 +37,18 @@ if (stristr($mainView, 'admin')) {
              * Site Navigation-bar Template
              */
             $this->load->view($templatePrefix . 'navbar');
-
-            /**
-             * Site Body Content Template
-             */
-            $this->load->view($templatePrefix . 'content');
             ?>
+            <!--<Main Body>-->
+            <div id="page_content">
+                <div class="container-fluid">
+                    <?php
+                    /**
+                     * Site Body Content Template
+                     */
+                    $this->load->view($mainView);
+                    ?>
+                </div>
+            </div>
         </div>
         <?php
         /**

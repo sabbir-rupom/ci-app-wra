@@ -24,9 +24,9 @@ $route['project/documentation'] = 'Documentation/index';
 /**
  * Admin Routes
  */
-$route['admin/login'] = 'admin/Auth/login';
-$route['admin/logout'] = 'admin/Auth/logout';
-$route['admin'] = 'admin/Dashboard/index';
+$route['login'] = 'Auth/login';
+$route['logout'] = 'Auth/logout';
+
 $route['admin/dashoard'] = 'admin/Dashboard/index';
 $route['admin/settings'] = 'admin/Settings/index';
 $route['admin/password/change']['POST'] = 'admin/Settings/changePassword';

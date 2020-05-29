@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Description of MY_Controller
  * Base class for all custom controller of the project
  *
- * @property CI_DB_active_record $db
+ * @property CI_DB_query_builder $db
  * @property CI_DB_forge $dbforge
  * @property CI_Benchmark $benchmark
  * @property CI_Config $config
